@@ -1,5 +1,5 @@
 FROM centos:7
-LABEL maintainer="groge <groge.choi@gmail.com>"
+LABEL maintainer="k2mani <k2mani@gmail.com>"
 
 # install Node
 RUN curl -sL https://rpm.nodesource.com/setup_8.x | bash -
@@ -15,9 +15,6 @@ RUN wget https://www.mirrorservice.org/sites/dl.fedoraproject.org/pub/epel/7/x86
 
 RUN rpm -U --quiet p7zip-16.02-10.el7.x86_64.rpm
 RUN rpm -U --quiet p7zip-plugins-16.02-10.el7.x86_64.rpm
-
-# Python for SNMP
-#RUN apk add --no-cache --update python
 
 ENV NODE_ENV production
 
